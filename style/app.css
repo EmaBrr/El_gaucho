@@ -94,7 +94,7 @@ header {
 header .nav {
   width: 100%;
   display: inline-block;
-  font-family: "Barlow", sans-serif;
+  font-family: "Cormorant Garamond", serif;
 }
 header .nav .nav-container {
   max-width: 1400px;
@@ -124,8 +124,8 @@ header .nav .nav-container .lang-toggle .lang-btn {
   cursor: pointer;
 }
 header .nav .nav-container .lang-toggle .active {
-  color: #f8f7f6;
-  opacity: 0.3;
+  color: #271d0d;
+  opacity: 0.4;
 }
 header .nav .nav-container .navigation {
   width: 100%;
@@ -155,7 +155,7 @@ header .nav .nav-container .navigation .nav-items li {
   text-transform: uppercase;
 }
 header .nav .nav-container .navigation .nav-items li a {
-  font-family: "Barlow", sans-serif;
+  font-family: "Cormorant Garamond", serif;
   color: #f8f7f6;
   font-weight: 300;
   transition: transform 0.5s ease;
@@ -307,7 +307,7 @@ header .nav .nav-container .navigation .nav-items li a :visited {
     right: -100%;
     width: 100%;
     height: 100vh;
-    background-color: #9b7c57;
+    background-color: #271d0d;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -330,12 +330,12 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   }
 }
 .hero {
-  background: url("../img/bacground_img_3.png") no-repeat center center fixed;
+  background: url("../img/background_img_8.png") no-repeat center center fixed;
   background-size: cover;
   height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
 }
 .hero::before {
@@ -345,56 +345,100 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 .hero .hero-content {
   text-align: center;
   color: #f8f7f6;
   z-index: 2;
+  margin-top: auto;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
 }
 .hero .hero-content .hero-logo {
-  max-width: 270px;
+  max-width: 300px;
   width: 100%;
-  margin-bottom: 10px;
-}
-.hero .hero-content .hero-info {
-  font-size: 1.5rem;
-  font-family: "Barlow", sans-serif;
-  font-weight: 300;
-  letter-spacing: 3px;
-  color: #bea381;
-  line-height: 25px;
 }
 .hero .hero-content .hero-text {
   font-size: 1.3rem;
-  font-family: "Barlow", sans-serif;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding: 15px;
+  color: #271d0d;
+}
+.hero .hero-content .hero-year {
+  font-size: 1.5rem;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  letter-spacing: 3px;
+  color: #271d0d;
+  line-height: 25px;
+}
+.hero .hero-footer {
+  text-align: center;
+  color: #f8f7f6;
+  z-index: 2;
+  padding-bottom: 40px;
+}
+.hero .hero-footer .hero-info {
+  font-size: 1.3rem;
+  font-family: "Cormorant Garamond", serif;
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 3px;
+  line-height: 25px;
   padding-bottom: 15px;
+}
+.hero .hero-footer .hero-phone {
+  font-size: 1.3rem;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  line-height: 25px;
+}
+.hero .hero-footer .hero-phone a {
+  color: #f8f7f6;
+  text-decoration: none;
+}
+.hero .hero-footer .hero-phone a:visited {
+  color: #f8f7f6;
 }
 
 @media screen and (max-width: 1500px) {
   .hero .hero-content .hero-logo {
-    max-width: 230px;
+    max-width: 300px;
   }
-  .hero .hero-content .hero-info {
+  .hero .hero-content .hero-year {
     font-size: 1.3rem;
   }
   .hero .hero-content .hero-text {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+  }
+  .hero .hero-footer .hero-info,
+  .hero .hero-footer .hero-phone {
+    font-size: 0.8rem;
   }
 }
 @media screen and (max-width: 1000px) {
   .hero .hero-content .hero-logo {
     max-width: 170px;
   }
-  .hero .hero-content .hero-info {
+  .hero .hero-content .hero-year {
     font-size: 1rem;
   }
   .hero .hero-content .hero-text {
     font-size: 0.9rem;
+  }
+  .hero .hero-footer .hero-info,
+  .hero .hero-footer .hero-phone {
+    font-size: 0.7rem;
   }
 }
 html {
@@ -408,6 +452,7 @@ body {
   color: #f8f7f6;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  min-height: 460px;
 }
 
 html::-webkit-scrollbar,

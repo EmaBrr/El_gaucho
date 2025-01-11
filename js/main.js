@@ -99,24 +99,36 @@ langButtons.forEach(button => {
   });
 });
 
-function updateLanguage(lang) {
-  // Update hero text
-  if (lang === 'en') {
-    heroText.textContent = 'Restaurant. Grill. Wines.';
-  } else if (lang === 'es') {
-    heroText.textContent = 'Restaurante. Parilla. Vinos.';
-  }
+// function updateLanguage(lang) {
+//   // Update hero text
+//   if (lang === 'en') {
+//     heroText.textContent = 'Restaurant. Grill. Wines.';
+//   } else if (lang === 'es') {
+//     heroText.textContent = 'Restaurante. Parilla. Vinos.';
+//   }
 
-  // Update navigation links
-  navItems.forEach(item => {
-    const enText = item.getAttribute('data-en');
-    const esText = item.getAttribute('data-es');
+//   // Update navigation links
+//   navItems.forEach(item => {
+//     const enText = item.getAttribute('data-en');
+//     const esText = item.getAttribute('data-es');
     
-    // Switch the text content of the nav items based on the language
-    if (lang === 'en') {
-      item.textContent = enText;
-    } else if (lang === 'es') {
-      item.textContent = esText;
-    }
+//     // Switch the text content of the nav items based on the language
+//     if (lang === 'en') {
+//       item.textContent = enText;
+//     } else if (lang === 'es') {
+//       item.textContent = esText;
+//     }
+//   });
+// }
+
+function updateLanguage(lang) {
+  // Update hero text and info
+  const translatableElements = document.querySelectorAll('[data-en][data-es]');
+  translatableElements.forEach(element => {
+      if (lang === 'en') {
+          element.innerHTML = element.getAttribute('data-en');
+      } else if (lang === 'es') {
+          element.innerHTML = element.getAttribute('data-es');
+      }
   });
 }
