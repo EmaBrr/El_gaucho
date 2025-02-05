@@ -2,10 +2,11 @@ $accentcolor: #392315;
 $backgroundcolor: #b8916f;
 $backgroundcolor2: #69503d;
 $backgroundcolor3: #946a4a;
-$white: #f8f7f6;
+// $white: #f8f7f6;
+$white: #f9efe0;
 
-$font_1: "Cormorant Garamond", serif;
-$font_2: "Cormorant Garamond", serif;
+$font_1: "Poppins", serif;
+$font_2: "Poppins", serif;
 
 header {
   width: 100%;
@@ -35,8 +36,8 @@ header {
         span {
           display: flex;
           align-items: center;
-          color: $white;
-          padding: 0px 15px;
+          color: #392315;
+          padding: 0px 5px;
         }
 
         .lang-btn  {
@@ -46,9 +47,8 @@ header {
         }
 
         .active {
-          color: #271d0d;
-          opacity: 0.4;
-
+          color: #ccc;
+          opacity: 0.5;
         }
       }
 
@@ -109,7 +109,7 @@ header {
   }
 }
 
-// Sreen sizes
+// Screen sizes
 
 @media screen and (min-width: 1500px) {
   .slogan .slogan-text {
@@ -117,7 +117,7 @@ header {
   }
 
   .nav {
-    height: 90px;
+    height: 60px;
 
     .nav-container {
       .lang-toggle {
@@ -127,7 +127,7 @@ header {
       }
 
       .navigation .nav-items li {
-        height: 90px;
+        height: 60px;
         padding: 10px 40px;
 
         a {

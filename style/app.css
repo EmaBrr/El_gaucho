@@ -94,7 +94,7 @@ header {
 header .nav {
   width: 100%;
   display: inline-block;
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Poppins", serif;
 }
 header .nav .nav-container {
   max-width: 1400px;
@@ -110,22 +110,22 @@ header .nav .nav-container .lang-toggle {
   align-items: center;
   letter-spacing: 1px;
   height: 100%;
-  color: #f8f7f6;
+  color: #f9efe0;
 }
 header .nav .nav-container .lang-toggle span {
   display: flex;
   align-items: center;
-  color: #f8f7f6;
-  padding: 0px 15px;
+  color: #392315;
+  padding: 0px 5px;
 }
 header .nav .nav-container .lang-toggle .lang-btn {
-  color: #f8f7f6;
+  color: #f9efe0;
   opacity: 1;
   cursor: pointer;
 }
 header .nav .nav-container .lang-toggle .active {
-  color: #271d0d;
-  opacity: 0.4;
+  color: #ccc;
+  opacity: 0.5;
 }
 header .nav .nav-container .navigation {
   width: 100%;
@@ -155,8 +155,8 @@ header .nav .nav-container .navigation .nav-items li {
   text-transform: uppercase;
 }
 header .nav .nav-container .navigation .nav-items li a {
-  font-family: "Cormorant Garamond", serif;
-  color: #f8f7f6;
+  font-family: "Poppins", serif;
+  color: #f9efe0;
   font-weight: 300;
   transition: transform 0.5s ease;
 }
@@ -180,13 +180,13 @@ header .nav .nav-container .navigation .nav-items li a :visited {
     font-size: 1rem;
   }
   .nav {
-    height: 90px;
+    height: 60px;
   }
   .nav .nav-container .lang-toggle span {
     font-size: 1.25rem;
   }
   .nav .nav-container .navigation .nav-items li {
-    height: 90px;
+    height: 60px;
     padding: 10px 40px;
   }
   .nav .nav-container .navigation .nav-items li a {
@@ -260,7 +260,7 @@ header .nav .nav-container .navigation .nav-items li a :visited {
     border-radius: 1px;
     height: 3px;
     width: 35px;
-    background: #f8f7f6;
+    background: #f9efe0;
     position: absolute;
     display: block;
     content: "";
@@ -272,7 +272,7 @@ header .nav .nav-container .navigation .nav-items li a :visited {
     border-radius: 1px;
     height: 3px;
     width: 35px;
-    background: #f8f7f6;
+    background: #f9efe0;
     position: absolute;
     display: block;
     content: "";
@@ -284,7 +284,7 @@ header .nav .nav-container .navigation .nav-items li a :visited {
     border-radius: 1px;
     height: 3px;
     width: 35px;
-    background: #f8f7f6;
+    background: #f9efe0;
     position: absolute;
     display: block;
     content: "";
@@ -324,13 +324,13 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   }
   header .nav .nav-container .navigation .nav-items li a {
     font-size: 1.5rem;
-    color: #f8f7f6;
+    color: #f9efe0;
     text-transform: uppercase;
     letter-spacing: 2px;
   }
 }
 .hero {
-  background: url("../img/background_img_8.png") no-repeat center center fixed;
+  background: url("../img/background_img_final.png") no-repeat center center fixed;
   background-size: cover;
   height: 100vh;
   display: flex;
@@ -345,50 +345,56 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
 .hero .hero-content {
   text-align: center;
-  color: #f8f7f6;
+  color: #f9efe0;
   z-index: 2;
   margin-top: auto;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 100px;
+  padding-top: 70px;
 }
 .hero .hero-content .hero-logo {
-  max-width: 300px;
+  max-width: 210px;
   width: 100%;
 }
-.hero .hero-content .hero-text {
-  font-size: 1.3rem;
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  padding: 15px;
-  color: #271d0d;
-}
 .hero .hero-content .hero-year {
-  font-size: 1.5rem;
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 400;
+  font-size: 1.1rem;
+  font-family: "Lora", serif;
+  font-weight: 300;
   letter-spacing: 3px;
-  color: #271d0d;
+  color: #f9efe0;
   line-height: 25px;
+}
+.hero .hero-middle {
+  text-align: center;
+  z-index: 2;
+  padding-bottom: 30px;
+}
+.hero .hero-middle .hero-text {
+  font-size: 1.2rem;
+  font-family: "Lora", serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  padding: 15px;
+  color: #f9efe0;
+  padding-bottom: 30px;
 }
 .hero .hero-footer {
   text-align: center;
-  color: #f8f7f6;
+  color: #f9efe0;
   z-index: 2;
-  padding-bottom: 40px;
+  padding-bottom: 30px;
 }
 .hero .hero-footer .hero-info {
-  font-size: 1.3rem;
-  font-family: "Cormorant Garamond", serif;
+  font-size: 1.1rem;
+  font-family: "Poppins", serif;
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -396,49 +402,65 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   padding-bottom: 15px;
 }
 .hero .hero-footer .hero-phone {
-  font-size: 1.3rem;
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 300;
+  font-size: 1.1rem;
+  font-family: "Poppins", serif;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 3px;
   line-height: 25px;
 }
 .hero .hero-footer .hero-phone a {
-  color: #f8f7f6;
+  color: #f9efe0;
   text-decoration: none;
 }
 .hero .hero-footer .hero-phone a:visited {
-  color: #f8f7f6;
+  color: #f9efe0;
 }
 
 @media screen and (max-width: 1500px) {
   .hero .hero-content .hero-logo {
-    max-width: 300px;
+    max-width: 200px;
   }
   .hero .hero-content .hero-year {
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
-  .hero .hero-content .hero-text {
+  .hero .hero-middle .hero-text {
     font-size: 1.2rem;
+  }
+  .hero .hero-footer .hero-info,
+  .hero .hero-footer .hero-phone {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .hero .hero-content .hero-logo {
+    max-width: 190px;
+  }
+  .hero .hero-content .hero-year {
+    font-size: 1rem;
+  }
+  .hero .hero-middle .hero-text {
+    font-size: 1rem;
   }
   .hero .hero-footer .hero-info,
   .hero .hero-footer .hero-phone {
     font-size: 0.8rem;
   }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 500px) {
   .hero .hero-content .hero-logo {
-    max-width: 170px;
+    max-width: 180px;
   }
   .hero .hero-content .hero-year {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
-  .hero .hero-content .hero-text {
-    font-size: 0.9rem;
+  .hero .hero-middle .hero-text {
+    font-size: 0.8rem;
+    padding-bottom: 20px;
   }
   .hero .hero-footer .hero-info,
   .hero .hero-footer .hero-phone {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
 }
 html {
@@ -449,9 +471,8 @@ html {
 body {
   margin: 0;
   background-color: #b8916f;
-  color: #f8f7f6;
+  color: #f9efe0;
   overflow-x: hidden;
-  scroll-behavior: smooth;
   min-height: 460px;
 }
 
