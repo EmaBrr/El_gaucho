@@ -16,6 +16,7 @@ $font_2: "Poppins", serif;
   flex-direction: column;
   justify-content: space-between; 
   position: relative;
+  min-height: 551px;
 
   &::before {
     content: "";
