@@ -97,7 +97,7 @@ header .nav {
   font-family: "Poppins", serif;
 }
 header .nav .nav-container {
-  max-width: 1400px;
+  max-width: 1600px;
   margin: 0 auto;
   height: 100%;
   position: relative;
@@ -307,7 +307,7 @@ header .nav .nav-container .navigation .nav-items li a :visited {
     right: -100%;
     width: 100%;
     height: 100vh;
-    background-color: #271d0d;
+    background-color: #71402d;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -330,14 +330,14 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   }
 }
 .hero {
-  background: url("../img/background_img_final.png") no-repeat center center fixed;
+  background: url("../img/background_img_final.png") no-repeat center center;
   background-size: cover;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  min-height: 551px;
+  min-height: 800px;
 }
 .hero::before {
   content: "";
@@ -346,7 +346,7 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 .hero .hero-content {
@@ -366,11 +366,12 @@ header .nav .nav-container .navigation .nav-items li a :visited {
 }
 .hero .hero-content .hero-year {
   font-size: 1.1rem;
-  font-family: "Lora", serif;
+  font-family: "Poppins", serif;
   font-weight: 300;
-  letter-spacing: 3px;
+  letter-spacing: 5px;
   color: #f9efe0;
   line-height: 25px;
+  padding-top: 10px;
 }
 .hero .hero-middle {
   text-align: center;
@@ -378,20 +379,21 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   padding-bottom: 30px;
 }
 .hero .hero-middle .hero-text {
-  font-size: 1.2rem;
+  font-size: 1.7rem;
   font-family: "Lora", serif;
-  font-weight: 300;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 5px;
+  letter-spacing: 8px;
   padding: 15px;
-  color: #f9efe0;
-  padding-bottom: 30px;
+  color: #debe4e;
+  padding-bottom: 35px;
+  text-shadow: -1px -1px 0 #71402d, 1px -1px 0 #71402d, -1px 1px 0 #71402d, 1px 1px 0 #71402d;
 }
 .hero .hero-footer {
   text-align: center;
   color: #f9efe0;
   z-index: 2;
-  padding-bottom: 30px;
+  padding-bottom: 60px;
 }
 .hero .hero-footer .hero-info {
   font-size: 1.1rem;
@@ -419,6 +421,9 @@ header .nav .nav-container .navigation .nav-items li a :visited {
 }
 
 @media screen and (max-width: 1500px) {
+  .hero {
+    min-height: 500px;
+  }
   .hero .hero-content .hero-logo {
     max-width: 200px;
   }
@@ -426,7 +431,7 @@ header .nav .nav-container .navigation .nav-items li a :visited {
     font-size: 1rem;
   }
   .hero .hero-middle .hero-text {
-    font-size: 1.2rem;
+    font-size: 1.7rem;
   }
   .hero .hero-footer .hero-info,
   .hero .hero-footer .hero-phone {
@@ -434,6 +439,9 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   }
 }
 @media screen and (max-width: 1000px) {
+  .hero {
+    min-height: 600px;
+  }
   .hero .hero-content .hero-logo {
     max-width: 190px;
   }
@@ -441,7 +449,7 @@ header .nav .nav-container .navigation .nav-items li a :visited {
     font-size: 1rem;
   }
   .hero .hero-middle .hero-text {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
   .hero .hero-footer .hero-info,
   .hero .hero-footer .hero-phone {
@@ -449,6 +457,9 @@ header .nav .nav-container .navigation .nav-items li a :visited {
   }
 }
 @media screen and (max-width: 500px) {
+  .hero {
+    min-height: 450px;
+  }
   .hero .hero-content .hero-logo {
     max-width: 180px;
   }
@@ -456,7 +467,26 @@ header .nav .nav-container .navigation .nav-items li a :visited {
     font-size: 0.8rem;
   }
   .hero .hero-middle .hero-text {
+    font-size: 1.2rem;
+    padding-bottom: 20px;
+  }
+  .hero .hero-footer .hero-info,
+  .hero .hero-footer .hero-phone {
     font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 390px) {
+  .hero {
+    min-height: 400px;
+  }
+  .hero .hero-content .hero-logo {
+    max-width: 180px;
+  }
+  .hero .hero-content .hero-year {
+    font-size: 0.8rem;
+  }
+  .hero .hero-middle .hero-text {
+    font-size: 0.7rem;
     padding-bottom: 20px;
   }
   .hero .hero-footer .hero-info,
