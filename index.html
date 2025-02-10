@@ -36,7 +36,8 @@
                     </div>
                     <ul class="nav-items">
                         <li><a href="#" class="nav-item" data-en="About Us" data-es="Sobre Nosotros">About Us</a></li>
-                        <li><a href="#" class="nav-item" data-en="Gallery" data-es="Galería">Gallery</a></li>
+                        <li><a href="#gallery" class="nav-item" data-en="Gallery" data-es="Galería">Gallery</a></li>
+                        <li><a href="#" class="nav-item" data-en="Menu" data-es="Menú">Menu</a></li>
                         <li><a href="#" class="nav-item" data-en="Contact Us" data-es="Contáctenos">Contact Us</a></li>
                     </ul>
                 </nav>
@@ -47,7 +48,7 @@
     <!-- Welcome -->
     <section class="hero">
         <div class="hero-content">
-            <img src="./img/logo/logo_yellow_vintage_2.png" alt="Logo" class="hero-logo">
+            <img src="./img/logo/logo_yellow_vintage_3.png" alt="Logo" class="hero-logo">
             <p class="hero-year">SOTOGRANDE <br> 1985</p>
         </div>
         <div class="hero-middle">
@@ -76,16 +77,34 @@
     </section> -->
 
     <!-- Gallery -->
-    <!-- <section class="gallery">
-        <div class="container">
-            <h2 class="gallery-title" data-en="Gallery" data-es="Galería">Gallery</h2>
-            <div class="gallery-images">
-                <img src="./img/gallery1.jpg" alt="Gallery Image 1" class="gallery-image">
-                <img src="./img/gallery2.jpg" alt="Gallery Image 2" class="gallery-image">
-                <img src="./img/gallery3.jpg" alt="Gallery Image 3" class="gallery-image">
-            </div>
+
+
+    <div class="gallery-container" id="gallery">
+        <h2 class="gallery-name" data-en="Gallery" data-es="Galería">Gallery</h2>
+        <div class="gallery">
+            <div class="gallery-item tall"><img src="./img/Gallery/_AS31898.jpg" alt="Image 1"
+                    onclick="openLightbox(this)"></div>
+            <div class="gallery-item wide"><img src="./img/Gallery/_AS31618.jpg" alt="Image 2"
+                    onclick="openLightbox(this)"></div>
+            <div class="gallery-item square"><img src="/img/Gallery/_AS31285-Editar.jpg" alt="Image 3"
+                    onclick="openLightbox(this)"></div>
+            <div class="gallery-item square"><img src="./img/Gallery/_AS31326-Editar.jpg" alt="Image 4"
+                    onclick="openLightbox(this)"></div>
+            <div class="gallery-item tall"><img src="./img/Gallery/_AS31578.jpg" alt="Image 5"
+                    onclick="openLightbox(this)"></div>
+            <div class="gallery-item square"><img src="./img/Gallery/_AS31737-Editar.jpg" alt="Image 6"
+                    onclick="openLightbox(this)"></div>
+            <div class="gallery-item wide"><img src="./img/Gallery/_AS31925.jpg" alt="Image 7"
+                    onclick="openLightbox(this)"></div>
+            <div class="gallery-item square"><img src="./img/Gallery/_AS32021.jpg" alt="Image 8"
+                    onclick="openLightbox(this)"></div>
         </div>
-    </section> -->
+    </div>
+
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="">
+        <span class="close">&times;</span>
+    </div>
 
 </body>
 
