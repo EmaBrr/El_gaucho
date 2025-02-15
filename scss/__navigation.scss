@@ -1,6 +1,7 @@
 header {
   width: 100%;
   display: inline-block;
+  position: fixed;
 
   .nav {
     width: 100%;
@@ -260,7 +261,7 @@ header {
             right: -100%;
             width: 100%;
             height: 100vh;
-            background-color: $accentcolor3;
+            background-color: $accentcolor4;
             display: flex;
             flex-direction: column;
             justify-content: center;

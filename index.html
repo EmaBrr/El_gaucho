@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <!-- JS -->
     <script src="./js/main.js" defer></script>
@@ -16,6 +16,9 @@
     <script src="https://kit.fontawesome.com/ac6953d5aa.js" crossorigin="anonymous" defer></script>
     <link rel="stylesheet" href="./style/app.css" />
     <title>El Gaucho</title>
+    <!-- Gallery  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 </head>
 
 <body>
@@ -35,7 +38,8 @@
                         </a>
                     </div>
                     <ul class="nav-items">
-                        <li><a href="#" class="nav-item" data-en="About Us" data-es="Sobre Nosotros">About Us</a></li>
+                        <li><a href="#about" class="nav-item" data-en="About Us" data-es="Sobre Nosotros">About Us</a>
+                        </li>
                         <li><a href="#gallery" class="nav-item" data-en="Gallery" data-es="Galería">Gallery</a></li>
                         <li><a href="#" class="nav-item" data-en="Menu" data-es="Menú">Menu</a></li>
                         <li><a href="#" class="nav-item" data-en="Contact Us" data-es="Contáctenos">Contact Us</a></li>
@@ -48,13 +52,13 @@
     <!-- Welcome -->
     <section class="hero">
         <div class="hero-content">
-            <img src="./img/logo/logo_yellow_vintage_3.png" alt="Logo" class="hero-logo">
+            <img src="./img/logo/logo_yellow_vintage_4.png" alt="Logo" class="hero-logo">
             <p class="hero-year">SOTOGRANDE <br> 1985</p>
         </div>
         <div class="hero-middle">
-            <p class="hero-text" id="hero-text" data-en="Restaurant. Grill. Wines."
-                data-es="Restaurante. Parilla. Vinos.">
-                Restaurant. Grill. Wines.
+            <p class="hero-text" id="hero-text" data-en="Restaurant. Grill. Wine."
+                data-es="Restaurante. Parilla. Vino.">
+                Restaurant. Grill. Wine.
             </p>
         </div>
         <div class="hero-footer">
@@ -66,21 +70,64 @@
         </div>
     </section>
 
+    <div class="overlay"></div>
+
     <!-- About Us -->
-    <!-- <section class="about-us">
-        <div class="container">
-            <h2 class="about-us-title" data-en="About Us" data-es="Sobre Nosotros">About Us</h2>
-            <p class="about-us-text" data-en="Welcome to our restaurant. We have been serving the finest dishes since 1985." data-es="Bienvenidos a nuestro restaurante. Hemos estado sirviendo los mejores platos desde 1985.">
-                Welcome to our restaurant. We have been serving the finest dishes since 1985.
-            </p>
+
+    <section class="section about" id="about">
+        <div class="section-container about-container">
+            <h2 class="section-name" data-en="About Us" data-es="Sobre Nosotros">About Us</h2>
+            <div class="about-content">
+                <div class="history-content">
+                    <p data-en="Established since 1985, El Gaucho was the first restaurant in Sotogrande to open to the public.
+                    This house favourite steakhouse is a benchmark in the Costa del Sol. First of its kind in the
+                    area, it has catered to our family and friends over 40 years and counting. Our vision is simple,
+                    a family run restaurant, that offers the highest quality steaks."
+                        data-es="Establecido desde 1985, El Gaucho fue el primer restaurante en Sotogrande en abrir al público.
+                    Esta querida parrilla es un referente en la Costa del Sol. Siendo el primero de su tipo en la zona, ha servido a nuestra familia y amigos durante más de 40 años y sigue contando. Nuestra visión es simple: un restaurante familiar que ofrece los mejores cortes de carne de la más alta calidad.">
+                        Established since 1985, El Gaucho was the first restaurant in Sotogrande to open to the public.
+                        This house favourite steakhouse is a benchmark in the Costa del Sol. First of its kind in the
+                        area, it has catered to our family and friends over 40 years and counting. Our vision is simple,
+                        a family run restaurant, that offers the highest quality steaks.
+                    </p>
+                </div>
+                <div class="history-slider">
+                    <img id="history-image" src="./img/Gallery/Papel_0078.jpg" alt="Historical Image">
+                </div>
+            </div>
+    </section>
+
+    <!-- <section class="section gallery" id="gallery">
+        <div class="section-container gallery-container">
+            <h2 class="section-name" data-en="About Us" data-es="Galería">Gallery</h2>
+            <div class="gallery-container">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="./img/Gallery/_AS31285-Editar.jpg" alt="Image 1"></div>
+                        <div class="swiper-slide"><img src="./img/Gallery/_AS31326-Editar.jpg" alt="Image 2"></div>
+                        <div class="swiper-slide"><img src="./img/Gallery/_AS31335-Editar.jpg" alt="Image 3"></div>
+                        <div class="swiper-slide"><img src="./img/Gallery/_AS31357.jpg" alt="Image 4"></div>
+                        <div class="swiper-slide"><img src="./img/Gallery/_AS31427.jpg" alt="Image 5"></div>
+                    </div>
+
+
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+
+
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
         </div>
     </section> -->
 
-    <!-- Gallery -->
+
+
+
 
 
     <div class="gallery-container" id="gallery">
-        <h2 class="gallery-name" data-en="Gallery" data-es="Galería">Gallery</h2>
+        <!-- <h2 class="section-name" data-en="Gallery" data-es="Galería">Gallery</h2>
         <div class="gallery">
             <div class="gallery-item tall"><img src="./img/Gallery/_AS31898.jpg" alt="Image 1"
                     onclick="openLightbox(this)"></div>
@@ -98,13 +145,13 @@
                     onclick="openLightbox(this)"></div>
             <div class="gallery-item square"><img src="./img/Gallery/_AS32021.jpg" alt="Image 8"
                     onclick="openLightbox(this)"></div>
-        </div>
+        </div> -->
     </div>
 
-    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <!-- <div class="lightbox" id="lightbox" onclick="closeLightbox()">
         <img id="lightbox-img" src="" alt="">
         <span class="close">&times;</span>
-    </div>
+    </div> -->
 
 </body>
 
