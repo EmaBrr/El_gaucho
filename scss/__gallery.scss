@@ -1,355 +1,358 @@
-// .gallery-container {
-//   display: flex;
-//   flex-direction: column;
-//   //   justify-content: center;
-//   align-items: center;
-//   // background-color: #A8A77A;
-//   height: 100vh;
-//   // background: #515943;
+  .gallery-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
 
-//   .gallery {
-//     display: grid;
-//     grid-template-columns: repeat(4, 1fr);
-//     gap: 15px;
-//     max-width: 1400px;
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      max-width: 1400px;
+      align-items: center;
+      // padding: 0px 50px;
+      padding-bottom: 10px;
 
-//     .gallery-item {
-//       overflow: hidden;
-//       border-radius: 5px;
-//       cursor: pointer;
-//       box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+      .gallery-item {
+        overflow: hidden;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
 
-//       img {
-//         width: 100%;
-//         height: 100%;
-//         object-fit: cover;
-//         transition: transform 0.3s ease-in-out;
-//       }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.3s ease-in-out;
+        }
 
-//       &:hover img {
-//         transform: scale(1.05);
-//         opacity: 0.6;
-//       }
-//     }
+        &:hover img {
+          transform: scale(1.05);
+          opacity: 0.6;
+        }
+      }
 
-//     .tall {
-//       grid-row: span 2;
-//       grid-column: span 1;
-//       height: 465px;
-//     }
+      .tall {
+        grid-row: span 2;
+        grid-column: span 1;
+        height: 420px;
+      }
 
-//     .square {
-//       grid-row: span 1;
-//       grid-column: span 1;
-//       height: 225px;
-//     }
+      .square {
+        grid-row: span 1;
+        grid-column: span 1;
+        height: 200px;
+      }
 
-//     .wide {
-//       grid-row: span 1;
-//       grid-column: span 2;
-//       height: 225px;
-//     }
+      .wide {
+        grid-row: span 1;
+        grid-column: span 2;
+        height: 200px;
+      }
 
-//     .narrow {
-//       grid-row: span 1;
-//       grid-column: span 1;
-//       height: 75px;
-//     }
-//   }
-// }
+      .narrow {
+        grid-row: span 1;
+        grid-column: span 1;
+        height: 75px;
+      }
+    }
+  }
 
-// .lightbox {
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   background: rgba(0, 0, 0, 0.8);
-//   display: none;
-//   justify-content: center;
-//   align-items: center;
-//   z-index: 1000;
 
-//   #lightbox-img {
-//     max-width: 90%;
-//     max-height: 90%;
-//     border: 5px solid $white;
-//   }
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 
-//   .close {
-//     position: absolute;
-//     top: 20px;
-//     right: 30px;
-//     font-size: 30px;
-//     color: $white;
-//     cursor: pointer;
-//     transition: 0.3s ease;
+  #lightbox-img {
+    max-width: 90%;
+    max-height: 90%;
+    border: 5px solid $accentcolor2;
+  }
 
-//     &:hover {
-//       transform: scale(1.2);
-//     }
-//   }
-// }
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    color: $white;
+    cursor: pointer;
+    transition: 0.3s ease;
 
-// @media screen and (max-width: $xxxl) {
-//   .gallery-container {
-//     .gallery {
-//       grid-template-columns: repeat(4, 1fr);
-//       max-width: 1200px;
-//       width: 90%;
-//       gap: 10px;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
 
-//       .tall {
-//         grid-row: span 2;
-//         grid-column: span 1;
-//         height: 430px;
-//       }
+@media screen and (max-width: $xxxl) {
+  .gallery-container {
+    .gallery {
+      grid-template-columns: repeat(4, 1fr);
+      max-width: 1200px;
+      width: 90%;
+      gap: 10px;
 
-//       .square {
-//         grid-row: span 1;
-//         grid-column: span 1;
-//         height: 210px;
-//       }
+      .tall {
+        grid-row: span 2;
+        grid-column: span 1;
+        height: 430px;
+      }
 
-//       .wide {
-//         grid-row: span 1;
-//         grid-column: span 2;
-//         height: 210px;
-//       }
+      .square {
+        grid-row: span 1;
+        grid-column: span 1;
+        height: 210px;
+      }
 
-//       .narrow {
-//         grid-row: span 1;
-//         grid-column: span 1;
-//         height: 75px;
-//       }
-//     }
-//   }
-// }
+      .wide {
+        grid-row: span 1;
+        grid-column: span 2;
+        height: 210px;
+      }
 
-// @media screen and (max-width: $xxl) {
-//   .gallery-container {
-//     .gallery {
-//       grid-template-columns: repeat(4, 1fr);
-//       max-width: 1000px;
-//       width: 90%;
-//       gap: 10px;
+      .narrow {
+        grid-row: span 1;
+        grid-column: span 1;
+        height: 75px;
+      }
+    }
+  }
+}
 
-//       .tall {
-//         grid-row: span 2;
-//         grid-column: span 1;
-//         height: 430px;
-//       }
+@media screen and (max-width: $xxl) {
+  .gallery-container {
+    .gallery {
+      grid-template-columns: repeat(4, 1fr);
+      max-width: 1000px;
+      width: 90%;
+      gap: 10px;
 
-//       .square {
-//         grid-row: span 1;
-//         grid-column: span 1;
-//         height: 210px;
-//       }
+      .tall {
+        grid-row: span 2;
+        grid-column: span 1;
+        height: 430px;
+      }
 
-//       .wide {
-//         grid-row: span 1;
-//         grid-column: span 2;
-//         height: 210px;
-//       }
+      .square {
+        grid-row: span 1;
+        grid-column: span 1;
+        height: 210px;
+      }
 
-//       .narrow {
-//         grid-row: span 1;
-//         grid-column: span 1;
-//         height: 75px;
-//       }
-//     }
-//   }
-// }
+      .wide {
+        grid-row: span 1;
+        grid-column: span 2;
+        height: 210px;
+      }
 
-// @media screen and (max-width: $xl) {
-//   .gallery-container {
-//     padding-bottom: 50px;
-//     height: auto;
+      .narrow {
+        grid-row: span 1;
+        grid-column: span 1;
+        height: 75px;
+      }
+    }
+  }
+}
 
-//     .gallery {
-//       grid-template-columns: repeat(4, 1fr);
-//       max-width: 900px;
-//       width: 90%;
-//       gap: 10px;
+@media screen and (max-width: $xl) {
+  .gallery-container {
+    padding-bottom: 50px;
+    height: auto;
 
-//       .tall {
-//         grid-row: span 2;
-//         grid-column: span 1;
-//         height: 380px;
-//       }
+    .gallery {
+      grid-template-columns: repeat(4, 1fr);
+      max-width: 900px;
+      width: 90%;
+      gap: 10px;
+      padding-bottom: 30px;
 
-//       .square {
-//         grid-row: span 1;
-//         grid-column: span 1;
-//         height: 185px;
-//       }
+      .tall {
+        grid-row: span 2;
+        grid-column: span 1;
+        height: 380px;
+      }
 
-//       .wide {
-//         grid-row: span 1;
-//         grid-column: span 2;
-//         height: 185px;
-//       }
+      .square {
+        grid-row: span 1;
+        grid-column: span 1;
+        height: 185px;
+      }
 
-//       .narrow {
-//         grid-row: span 1;
-//         grid-column: span 1;
-//         height: 75px;
-//       }
-//     }
-//   }
-// }
+      .wide {
+        grid-row: span 1;
+        grid-column: span 2;
+        height: 185px;
+      }
 
-// @media screen and (max-width: $l2) {
-//   .gallery-container {
-//     padding-bottom: 50px;
-//     height: auto;
+      .narrow {
+        grid-row: span 1;
+        grid-column: span 1;
+        height: 75px;
+      }
+    }
+  }
+}
 
-//     .gallery {
-//       grid-template-columns: repeat(4, 1fr);
-//       max-width: 700px;
-//       width: 90%;
-//       gap: 10px;
+@media screen and (max-width: $l2) {
+  .gallery-container {
+    padding-bottom: 50px;
+    height: auto;
 
-//       .tall {
-//         grid-row: span 2;
-//         grid-column: span 1;
-//         height: 330px;
-//       }
+    .gallery {
+      grid-template-columns: repeat(4, 1fr);
+      max-width: 700px;
+      width: 90%;
+      gap: 10px;
+      padding-bottom: 30px;
 
-//       .square {
-//         grid-row: span 1;
-//         grid-column: span 1;
-//         height: 160px;
-//       }
+      .tall {
+        grid-row: span 2;
+        grid-column: span 1;
+        height: 330px;
+      }
 
-//       .wide {
-//         grid-row: span 1;
-//         grid-column: span 2;
-//         height: 160px;
-//       }
+      .square {
+        grid-row: span 1;
+        grid-column: span 1;
+        height: 160px;
+      }
 
-//       .narrow {
-//         grid-row: span 1;
-//         grid-column: span 1;
-//         height: 75px;
-//       }
-//     }
-//   }
-// }
+      .wide {
+        grid-row: span 1;
+        grid-column: span 2;
+        height: 160px;
+      }
 
-// @media screen and (max-width: $l) {
-//     .gallery-container {
-//       padding-bottom: 50px;
-//       height: auto;
+      .narrow {
+        grid-row: span 1;
+        grid-column: span 1;
+        height: 75px;
+      }
+    }
+  }
+}
 
-//       .gallery {
-//         grid-template-columns: repeat(4, 1fr);
-//         max-width: 600px;
-//         width: 90%;
-//         gap: 10px;
+@media screen and (max-width: $l) {
+  .gallery-container {
+    padding-bottom: 50px;
+    height: auto;
 
-//         .tall {
-//           grid-row: span 2;
-//           grid-column: span 1;
-//           height: 290px;
-//         }
+    .gallery {
+      grid-template-columns: repeat(4, 1fr);
+      max-width: 600px;
+      width: 90%;
+      gap: 10px;
 
-//         .square {
-//           grid-row: span 1;
-//           grid-column: span 1;
-//           height: 140px;
-//         }
+      .tall {
+        grid-row: span 2;
+        grid-column: span 1;
+        height: 290px;
+      }
 
-//         .wide {
-//           grid-row: span 1;
-//           grid-column: span 2;
-//           height: 140px;
-//         }
+      .square {
+        grid-row: span 1;
+        grid-column: span 1;
+        height: 140px;
+      }
 
-//         .narrow {
-//           grid-row: span 1;
-//           grid-column: span 1;
-//           height: 75px;
-//         }
-//       }
-//     }
-//   }
+      .wide {
+        grid-row: span 1;
+        grid-column: span 2;
+        height: 140px;
+      }
 
-//   @media screen and (max-width: $m) {
-//     .gallery-container {
-//       padding-bottom: 50px;
-//       height: auto;
+      .narrow {
+        grid-row: span 1;
+        grid-column: span 1;
+        height: 75px;
+      }
+    }
+  }
+}
 
-//       .gallery {
-//         grid-template-columns: repeat(4, 1fr);
-//         max-width: 600px;
-//         width: 90%;
-//         gap: 10px;
+@media screen and (max-width: $m) {
+  .gallery-container {
+    padding-bottom: 50px;
+    height: auto;
 
-//         .tall {
-//           grid-row: span 2;
-//           grid-column: span 1;
-//           height: 230px;
-//         }
+    .gallery {
+      grid-template-columns: repeat(4, 1fr);
+      max-width: 600px;
+      width: 90%;
+      gap: 10px;
 
-//         .square {
-//           grid-row: span 1;
-//           grid-column: span 1;
-//           height: 110px;
-//         }
+      .tall {
+        grid-row: span 2;
+        grid-column: span 1;
+        height: 230px;
+      }
 
-//         .wide {
-//           grid-row: span 1;
-//           grid-column: span 2;
-//           height: 110px;
-//         }
+      .square {
+        grid-row: span 1;
+        grid-column: span 1;
+        height: 110px;
+      }
 
-//         .narrow {
-//           grid-row: span 1;
-//           grid-column: span 1;
-//           height: 75px;
-//         }
-//       }
-//     }
-//   }
+      .wide {
+        grid-row: span 1;
+        grid-column: span 2;
+        height: 110px;
+      }
 
-//   @media screen and (max-width: $s2) {
-//     .gallery-container {
-//       padding-bottom: 50px;
-//       height: auto;
+      .narrow {
+        grid-row: span 1;
+        grid-column: span 1;
+        height: 75px;
+      }
+    }
+  }
+}
 
-//       .gallery {
-//         grid-template-columns: repeat(4, 1fr);
-//         max-width: 600px;
-//         width: 90%;
-//         gap: 10px;
+@media screen and (max-width: $s2) {
+  .gallery-container {
+    padding-bottom: 50px;
+    height: auto;
 
-//         .tall {
-//           grid-row: span 2;
-//           grid-column: span 1;
-//           height: 210px;
-//         }
+    .gallery {
+      grid-template-columns: repeat(4, 1fr);
+      max-width: 600px;
+      width: 90%;
+      gap: 10px;
 
-//         .square {
-//           grid-row: span 1;
-//           grid-column: span 1;
-//           height: 100px;
-//         }
+      .tall {
+        grid-row: span 2;
+        grid-column: span 1;
+        height: 210px;
+      }
 
-//         .wide {
-//           grid-row: span 1;
-//           grid-column: span 2;
-//           height: 100px;
-//         }
+      .square {
+        grid-row: span 1;
+        grid-column: span 1;
+        height: 100px;
+      }
 
-//         .narrow {
-//           grid-row: span 1;
-//           grid-column: span 1;
-//           height: 75px;
-//         }
-//       }
-//     }
-//   }
+      .wide {
+        grid-row: span 1;
+        grid-column: span 2;
+        height: 100px;
+      }
+
+      .narrow {
+        grid-row: span 1;
+        grid-column: span 1;
+        height: 75px;
+      }
+    }
+  }
+}
 
 // NEW
 // .swiper {
@@ -468,112 +471,112 @@
 //   display: none;
 // }
 
-.gallery {
-  position: relative;
-  padding: 50px 0;
+// .gallery {
+//   position: relative;
+//   padding: 50px 0;
 
-  .swiper {
-    position: relative;
-    width: 100%;
-    max-width: 1300px;
-    margin: 0 auto;
-    overflow: hidden;
-  }
+//   .swiper {
+//     position: relative;
+//     width: 100%;
+//     max-width: 1300px;
+//     margin: 0 auto;
+//     overflow: hidden;
+//   }
 
-  .swiper-wrapper {
-    display: flex;
-    align-items: center;
-  }
+//   .swiper-wrapper {
+//     display: flex;
+//     align-items: center;
+//   }
 
-  .swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 !important; // Ensure no extra margin
-    padding: 0 !important; // Ensure no extra padding
-    transition: transform 0.3s ease, opacity 0.3s ease;
-  }
+//   .swiper-slide {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     margin: 0 !important; // Ensure no extra margin
+//     padding: 0 !important; // Ensure no extra padding
+//     transition: transform 0.3s ease, opacity 0.3s ease;
+//   }
 
-  .swiper-slide img {
-    width: 100%;
-    max-width: 450px;
-    height: 400px;
-    object-fit: cover;
-    margin: 0 !important; // Ensure no extra margin
-    padding: 0 !important; // Ensure no extra padding
-    transition: transform 0.3s ease, opacity 0.3s ease;
-  }
+//   .swiper-slide img {
+//     width: 100%;
+//     max-width: 450px;
+//     height: 400px;
+//     object-fit: cover;
+//     margin: 0 !important; // Ensure no extra margin
+//     padding: 0 !important; // Ensure no extra padding
+//     transition: transform 0.3s ease, opacity 0.3s ease;
+//   }
 
-  .swiper-slide:not(.swiper-slide-active) img {
-    opacity: 0.5;
-    transform: scale(0.8);
-    border-radius: 5px;
-  }
+//   .swiper-slide:not(.swiper-slide-active) img {
+//     opacity: 0.5;
+//     transform: scale(0.8);
+//     border-radius: 5px;
+//   }
 
-  .swiper-slide-active img {
-    transform: scale(1);
-    opacity: 1;
-    border-radius: 5px;
-  }
+//   .swiper-slide-active img {
+//     transform: scale(1);
+//     opacity: 1;
+//     border-radius: 5px;
+//   }
 
-  .swiper-button-next,
-  .swiper-button-prev {
-    position: absolute;
-    top: 50%;
-    width: 50px;
-    height: 50px;
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    font-size: 3rem;
-    align-items: center;
-    justify-content: center;
-    z-index: 100000;
-    transition: 0.3s ease-in-out;
-    background-color: transparent;
-    color: $accentcolor2 !important;
-    border: -1px -1px 0 $accentcolor3, 1px -1px 0 $accentcolor3,
-      -1px 1px 0 $accentcolor3, 1px 1px 0 $accentcolor3;
-      font-weight: bold;
+//   .swiper-button-next,
+//   .swiper-button-prev {
+//     position: absolute;
+//     top: 50%;
+//     width: 50px;
+//     height: 50px;
+//     background: rgba(0, 0, 0, 0.6);
+//     color: white;
+//     border-radius: 50%;
+//     display: flex;
+//     font-size: 3rem;
+//     align-items: center;
+//     justify-content: center;
+//     z-index: 100000;
+//     transition: 0.3s ease-in-out;
+//     background-color: transparent;
+//     color: $accentcolor2 !important;
+//     border: -1px -1px 0 $accentcolor3, 1px -1px 0 $accentcolor3,
+//       -1px 1px 0 $accentcolor3, 1px 1px 0 $accentcolor3;
+//       font-weight: bold;
 
-    &::after {
-      font-size: 3rem;
-    }
+//     &::after {
+//       font-size: 3rem;
+//     }
 
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
+//     &:hover {
+//       transform: scale(1.1);
+//     }
+//   }
 
-  .swiper-button-prev {
-    left: -10px;
-  }
+//   .swiper-button-prev {
+//     left: -10px;
+//   }
 
-  .swiper-button-next {
-    right: -10px;
-  }
+//   .swiper-button-next {
+//     right: -10px;
+//   }
 
-  // .swiper-pagination {
-  //   // position: absolute;
-  //   // bottom: -40px;
-  //   // left: 50%;
-  //   // transform: translateX(-50%);
-  //   display: flex;
-  //   gap: 10px;
+// .swiper-pagination {
+//   // position: absolute;
+//   // bottom: -40px;
+//   // left: 50%;
+//   // transform: translateX(-50%);
+//   display: flex;
+//   gap: 10px;
 
-  //   .swiper-pagination-bullet {
-  //     width: 12px;
-  //     height: 12px;
-  //     background: rgba(0, 0, 0, 0.5);
-  //     opacity: 0.7;
-  //     transition: 0.3s ease-in-out;
+//   .swiper-pagination-bullet {
+//     width: 12px;
+//     height: 12px;
+//     background: rgba(0, 0, 0, 0.5);
+//     opacity: 0.7;
+//     transition: 0.3s ease-in-out;
 
-  //     &.swiper-pagination-bullet-active {
-  //       background: black;
-  //       opacity: 1;
-  //       transform: scale(1.2);
-  //     }
-  //   }
-  // }
-}
+//     &.swiper-pagination-bullet-active {
+//       background: black;
+//       opacity: 1;
+//       transform: scale(1.2);
+//     }
+//   }
+// }
+// }

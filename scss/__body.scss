@@ -90,15 +90,22 @@ header {
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 80px 20px 20px 20px;
+  // justify-content: space-between;
+  justify-content: center;
+  justify-items: center;
+  padding: 20px;
   width: 100%;
   position: relative;
   z-index: 2;
   background: none !important;
   color: white;
   height: auto;
-  padding-bottom: 200px;
+  // padding-bottom: 200px;
+  height: 100vh;
+
+  @media screen and (max-width: $m) {
+    padding: 50px 15px 15px 15px;
+  }
 
   .section-container {
     width: 80%;
@@ -118,5 +125,10 @@ header {
     @media screen and (max-width: $l2) {
       padding-bottom: 0px;
     }
+
+    @media screen and (max-width: $m) {
+      width: 100%;
+    }
+
   }
 }
